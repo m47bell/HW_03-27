@@ -8,7 +8,9 @@ package nyc.c4q.m47bell;
  * and returns a boolean value which tells us whether they are actually
  * the same input message encoded using two different offsets.
  */
+
 import java.util.Scanner;
+
 public class CaesarCipher {
 
     public static String decode(String enc, int offset) {
@@ -104,7 +106,7 @@ public class CaesarCipher {
                     return inputMessage;
 
                     // if asciiCode2 is less than asciiCode1
-                } else
+                } else {
                     offset = Math.abs(asciiCode2 - asciiDecode);
 
                 decodeAsciiCode2 = asciiCode2 + offset;
@@ -116,8 +118,10 @@ public class CaesarCipher {
                 String decodeCode2 = Character.toString(code2Char);
 
                 //compare the two decoded strings to determine if same input message
-                if (decodeCode2.equals(decoded)) {
+                    if (decodeCode2.equals(decoded)) {
                     return inputMessage;
+                    }
+
                 }
             }
             return inputMessage;
